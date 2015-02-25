@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: Woo Commerce Customizer
+Plugin Name: Canvas Extension - WooCommerce Customizer
 Plugin URI: http://see-ya-soon.com
-Description: Plugin for customizing WooCommerce
+Description: A Canvas Extension for customizing WooCommerce. Options can be found in WP Customizer (Appearance > Customize) under 'WooCommerce' section.
 Version: 0.7
 Author: Shramee
 Author URI: http://shramee.com/

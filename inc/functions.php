@@ -8,8 +8,8 @@ function woo_custom_register_theme_customizer( $wp_customize ) {
 		    'priority'       => 10,
 		    'capability'     => 'edit_theme_options',
 		    'theme_supports' => '',
-		    'title'          => 'Woocommerce',
-		    'description'    => 'Customize Woocommerce',
+		    'title'          => 'WooCommerce',
+		    'description'    => 'Customize WooCommerce',
 		) );
 	
   //Creating Sections

@@ -11,7 +11,7 @@ require_once 'classes.php';
 //Functions
   if(!function_exists( 'woo_custom_create_section' )){
   	/**
-  	 * Creates a section for Woocommerce Customizer Plugin in woo_custom_woocommerce panel
+  	 * Creates a section for WooCommerce Customizer Plugin in woo_custom_woocommerce panel
   	 * @uses $wp_customize->add_section
   	 * @param string $id ID of section
   	 * @param string $name name for section
