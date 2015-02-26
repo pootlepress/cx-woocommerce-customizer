@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Canvas Extension - WooCommerce Customizer
-Plugin URI: http://see-ya-soon.com
+Plugin URI: http://www.pootlepress.com
 Description: A Canvas Extension for customizing WooCommerce. Options can be found in WP Customizer (Appearance > Customize) under 'WooCommerce' section.
-Version: 0.7
-Author: Shramee
-Author URI: http://shramee.com/
+Version: 0.9
+Author: PootlePress
+Author URI: http://www.pootlepress.com
 License: GPL version 2 or later - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 */
 if ( ! function_exists( 'is_woocommerce_activated' ) ) {
