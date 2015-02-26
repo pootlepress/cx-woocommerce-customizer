@@ -20,7 +20,7 @@ require_once('variables.php');
 		add_filter('loop_shop_columns', 'woo_custom_loop_columns', 999);
 		if (woo_custom_get_theme_mod('Product columns', 'sp', 4)!=4){
 			GLOBAL $woo_custom_style;
-			$woo_custom_style = "
+			$woo_custom_style .= "
 			@media only screen and (min-width: 768px){
 				.post-type-archive-product ul.products li.product.first{
 					margin-left: ".((4 - woo_custom_get_theme_mod('Product columns', 'sp', 4))*12.8)."% !important;
@@ -37,7 +37,7 @@ require_once('variables.php');
 
 		//Remove product title
 		if (false == woo_custom_get_theme_mod('Display product title', 'sp', true)){
-			$woo_custom_style = 'body.post-type-archive-product ul.products li.product h3{display:none;}';
+			$woo_custom_style .= 'body.post-type-archive-product ul.products li.product h3{display:none;}';
 		}
 
 		//Remove product price
