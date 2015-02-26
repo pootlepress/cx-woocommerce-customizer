@@ -20,6 +20,7 @@ When the Canvas by WooThemes is activated, this plugin gives you options in the 
 == Usage ==
 
 Once installed and activated, go to the WordPress customizer (Appearance > Customize) and under the section 'WooCommerce' you will find all the options.
+For support please visit: http://www.pootlepress.com/support-form/
 
 == Installation ==
 
