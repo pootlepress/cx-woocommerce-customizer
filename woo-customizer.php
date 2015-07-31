@@ -8,6 +8,9 @@ Author: PootlePress
 Author URI: http://www.pootlepress.com
 License: GPL version 3 or later - http://www.gnu.org/licenses/gpl-3.0.html
 */
+
+$cx_woo_customizer_version = '1.0.0';
+
 if ( ! function_exists( 'is_woocommerce_activated' ) ) {
 	function is_woocommerce_activated() {
 		if ( class_exists( 'woocommerce' ) ) { return true; } else { return false; }
@@ -30,17 +33,23 @@ if (is_woocommerce_activated()){}
 	}
 	add_action( 'admin_enqueue_scripts', 'woo_custom_wp_admin_scripts' );
 
-require_once('inc/class-pootlepress-updater.php');
-
-add_action('init', 'pp_wc_updater');
-function pp_wc_updater()
-{
-	if (!function_exists('get_plugin_data')) {
-		include(ABSPATH . 'wp-admin/includes/plugin.php');
-	}
-	$data = get_plugin_data(__FILE__);
-	$wptuts_plugin_current_version = $data['Version'];
-	$wptuts_plugin_remote_path = 'http://www.pootlepress.com/?updater=1';
-	$wptuts_plugin_slug = plugin_basename(__FILE__);
-	new Pootlepress_Updater ($wptuts_plugin_current_version, $wptuts_plugin_remote_path, $wptuts_plugin_slug);
-}
+//CX API
+require 'pp-cx/class-pp-cx-init.php';
+new PP_Canvas_Extensions_Init(
+	array(
+		'key'          => 'woocommerce-customizer',
+		'label'        => 'WooCommerce Customizer',
+		'url'          => 'http://www.pootlepress.com/shop/woocommerce-customizer-woothemes-canvas/',
+		'description'  => "Get complete control over your WooCommerce shop in Canvas. Better layout your Shop page, show/hide lots of options on the Shop and Product pages and create a distraction free shopping experience in 1 click!",
+		'img'          => 'http://www.pootlepress.com/wp-content/uploads/2015/02/wc-cust-icon-300x174.png',
+		'installed'    => true,
+		'settings_url' => admin_url( 'admin.php?page=pp-extensions&cx=woocommerce-customizer' ),
+	),
+	array(
+		//Tabs coming soon
+	),
+	'pp_cx_woocommerce_customizer',
+	'Canvas Extension - WooCommerce Customizer',
+	$cx_woo_customizer_version,
+	__FILE__
+);
