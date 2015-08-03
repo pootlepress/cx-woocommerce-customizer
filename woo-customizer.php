@@ -46,7 +46,7 @@ new PP_Canvas_Extensions_Init(
 		'settings_url' => admin_url( 'admin.php?page=pp-extensions&cx=woocommerce-customizer' ),
 	),
 	array(
-		//Tabs coming soon
+		// No tabs required
 	),
 	'pp_cx_woocommerce_customizer',
 	'Canvas Extension - WooCommerce Customizer',
