@@ -9,8 +9,6 @@ Author URI: http://www.pootlepress.com
 License: GPL version 3 or later - http://www.gnu.org/licenses/gpl-3.0.html
 */
 
-$cx_woo_customizer_version = '1.0.0';
-
 if ( ! function_exists( 'is_woocommerce_activated' ) ) {
 	function is_woocommerce_activated() {
 		if ( class_exists( 'woocommerce' ) ) { return true; } else { return false; }
@@ -32,13 +30,7 @@ new PP_Canvas_Extensions_Init(
 		'description'  => "Get complete control over your WooCommerce shop in Canvas. Better layout your Shop page, show/hide lots of options on the Shop and Product pages and create a distraction free shopping experience in 1 click!",
 		'img'          => 'http://www.pootlepress.com/wp-content/uploads/2015/02/wc-cust-icon-300x174.png',
 		'installed'    => true,
-		'settings_url' => admin_url( 'admin.php?page=pp-extensions&cx=woocommerce-customizer' ),
+		'settings_url' => admin_url( 'customize.php?autofocus[panel]=woo_custom_woocommerce' ),
 	),
-	array(
-		// No tabs required
-	),
-	'pp_cx_woocommerce_customizer',
-	'Canvas Extension - WooCommerce Customizer',
-	$cx_woo_customizer_version,
 	__FILE__
 );
